@@ -1,0 +1,319 @@
+@charset "utf-8";
+/* Um reset de página no CSS é uma técnica usada para remover ou neutralizar os estilos padrão que os navegadores aplicam aos elementos HTML.
+Cada navegador tem sua própria folha de estilo padrão (user agent stylesheet), o que significa que, sem um reset, elementos como títulos,
+parágrafos, listas e outros podem ser exibidos de maneira diferente em diferentes navegadores.
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* pixel => para tamanho e dimensões () */
+html{
+    height: 100vh;
+}
+
+/* background imagem - aplicar o gradiente
+   background repeat - é para fazer com que o gradiente não repita na tela
+   background position - é para aplicar a posição a qual o gradiente virá
+   background attachment - é para fixar o gradiente na tela 
+*/
+
+body{
+    background-image: linear-gradient(to bottom,  #0a0094 , #00f7ff , #0a0094);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed; 
+}
+
+/* paara configurar o css vamos atribuir estruturas e depois objetos */
+
+header{
+    display: flex;
+    justify-content: center;
+    background-color: #0a0094;
+    width: 90vw;
+    height: 7em;
+    margin: auto;
+    border-radius: 1em 1em 0 0;
+}
+
+h1{
+    color: #f5f5f5;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0, 1);
+    margin-top: 1em;
+    
+}
+
+h2{
+    margin: 1em 0 1em 0;
+}
+
+#burger {
+    background-color: #21203f;
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    margin: auto;
+    padding: 7px;
+    width: 90vw;
+    cursor: pointer;
+}
+
+#burger:hover {
+    background-color: #0a0094;
+    transition: 1S;
+}
+
+menu {
+    color: whitesmoke;
+    text-align: center;
+    list-style-type: none;
+    width: 90vw;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+menu>ul {
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+
+menu>ul>li>a {
+    display: block;
+    padding: 7px;
+    width: 90vw;
+    text-decoration: none;
+    text-align: center;
+    background-color: #21203f;
+    border-radius: 0px 0px 0px 0px;
+    color: whitesmoke;
+    margin: auto;
+}
+
+menu>ul>li>a:hover {
+    background-color: #0a0094;    
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    height: 2em;
+    background-color: #009fa4;
+    border-radius: 1em;
+}
+
+a:hover{
+    transition: 1s;
+    /* transform: scale(1.05); */
+    background-color: #0a0094;
+}
+
+main{
+    margin: auto;
+    width: 90VW;
+    border-radius: 7px 7px 0px 0px;
+    background-color: #00a2ff;
+    margin-top: 7px;
+    padding: 1em;
+    margin-bottom: 11em;
+}
+
+article>h2{
+    text-align: center;
+}
+
+img{
+    display: block;
+    margin: auto;
+    box-shadow: 2px 4px 5px rgb(0, 0, 0, 0.5);
+}
+
+img#mobile{
+    display: block;
+    margin-top: 2em;
+}
+
+img#tablet{
+    display: none;
+    margin-top: 2em;
+}
+
+img#pc{
+    display: none;
+    margin-top: 2em;
+}
+
+img#tv{
+    display: none;
+    margin-top: 2em;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 3em;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-image: linear-gradient(to left,  #0a0094 , #00f7ff , #0a0094);
+    width: 90vw;
+    margin: auto;
+}
+
+@media  screen and (min-width:  768px) and (max-width: 992px) {
+
+    body {
+        background-image:url("../back-tablet.jpg");
+        background-size: cover;
+
+    }
+
+    img#mobile{
+        display: none;
+    }
+    
+    img#tablet{
+        display: block;
+        /* margin-top: 4em; */
+    }
+    
+    img#pc{
+        display: none;
+    }
+    
+    img#tv{
+        display: none;
+    }
+
+    menu{
+        display: block;
+        width: 90vw;
+        margin: auto;
+    }
+
+    menu>ul{
+        display: inline-block;
+        margin: auto;
+    }
+
+    a{
+        width: 90vw;
+        border-radius: 0;
+    }
+
+    a:hover{
+        transform: none;
+        transition: none;
+    }
+
+    main{
+        margin-bottom: 1em;
+    }
+
+    article>p{
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+}
+
+@media  screen and (min-width:  993px) and (max-width: 1200px) {
+
+    body {
+        background-image:url("../back-pc.jpg");
+
+    }
+
+    img#mobile{
+        display: none;
+    }
+    
+    img#tablet{
+        display: none;
+    }
+    
+    img#pc{
+        display: block;
+        /* margin-top: 4em; */
+    }
+    
+    img#tv{
+        display: none;
+    }
+
+    menu{
+        display: block;
+        width: 90vw;
+        margin: auto;
+        /* background-color: #21203f; */
+    }
+
+    menu>ul{
+        display: block;
+        margin: auto;
+    }
+
+    a{
+        width: 90vw;
+        border-radius: 0;
+    }
+
+    a:hover{
+        transform: none;
+        transition: none;
+    }
+
+    article>p{
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+    
+}
+
+@media screen and (min-width: 1201px) {
+
+    body{
+        background-image: url(../back-tv.jpg);
+    }
+
+    img#mobile{
+        display: none;
+        /* margin-top: 5em; */
+    }
+    
+    img#tablet{
+        display: none;
+    }
+    
+    img#pc{
+        display: none;
+    }
+    
+    img#tv{
+        display: block;
+    }
+
+    article>p{
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+}  
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+    body{
+        background-image: url(../back-phone.jpg);
+        background-size: cover;
+    }
+
+    
+}
